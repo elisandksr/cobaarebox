@@ -113,11 +113,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: Text(
           'Klaim Barang',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF00736D)),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.orange[600],
+          ),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -131,24 +133,25 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: const Color(0xFF00736D).withOpacity(0.1),
+                color: Colors.orange[100],
                 borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.orange[200]!),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Kontak Pemilik:',
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF00736D),
+                      color: Colors.orange[700],
                     ),
                   ),
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      const Icon(Icons.phone, color: Color(0xFF00736D), size: 18),
+                      Icon(Icons.phone, color: Colors.orange[600], size: 18),
                       const SizedBox(width: 8),
                       Text(
                         item['contact'],
@@ -175,9 +178,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF00736D),
+              backgroundColor: Colors.orange[600],
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
             ),
             onPressed: () {
@@ -186,7 +189,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             },
             child: const Text(
               'Klaim Barang',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
@@ -213,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             ),
           ],
         ),
-        backgroundColor: const Color(0xFF00736D),
+        backgroundColor: Colors.orange[600],
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         margin: const EdgeInsets.all(20),
@@ -277,13 +283,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF00736D).withOpacity(0.1),
+                            color: Colors.orange[100],
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: const Text(
+                          child: Text(
                             'Kategori',
                             style: TextStyle(
-                              color: Color(0xFF00736D),
+                              color: Colors.orange[700],
                               fontSize: 11,
                               fontWeight: FontWeight.w600,
                             ),
@@ -355,26 +361,26 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF00736D).withOpacity(0.1),
+                        color: Colors.orange[50],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                          color: const Color(0xFF00736D).withOpacity(0.3),
+                          color: Colors.orange[200]!,
                         ),
                       ),
                       child: Row(
                         children: [
-                          const Icon(Icons.lock_outline, color: Color(0xFF00736D), size: 20),
+                          Icon(Icons.lock_outline, color: Colors.orange[600], size: 20),
                           const SizedBox(width: 12),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
+                                Text(
                                   'Kontak Pemilik Tersembunyi',
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: Color(0xFF00736D),
+                                    color: Colors.orange[700],
                                   ),
                                 ),
                                 const SizedBox(height: 4),
@@ -404,7 +410,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: isClaimed ? Colors.grey[400] : const Color(0xFF00736D),
+                    backgroundColor: isClaimed ? Colors.grey[400] : Colors.orange[600],
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -443,8 +449,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.15),
-              blurRadius: 8,
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
               offset: const Offset(0, 4),
             ),
           ],
@@ -469,7 +475,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF00736D),
+                      color: Colors.orange[600],
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -533,7 +539,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       height: 32,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: isClaimed ? Colors.grey[400] : const Color(0xFF00736D),
+                          backgroundColor: isClaimed ? Colors.grey[400] : Colors.orange[600],
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -567,11 +573,14 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
         flexibleSpace: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF00736D), Color(0xFF00A69A)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
+              colors: [
+                Colors.orange[600]!,
+                Colors.orange[400]!,
+              ],
             ),
           ),
         ),
@@ -582,6 +591,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             fontWeight: FontWeight.w900,
             letterSpacing: 2,
             fontSize: 24,
+            fontFamily: 'Impact',
           ),
         ),
         centerTitle: true,
@@ -604,7 +614,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
+              color: Colors.black.withOpacity(0.1),
               blurRadius: 10,
               offset: const Offset(0, -2),
             ),
@@ -616,7 +626,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           backgroundColor: Colors.white,
           elevation: 0,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: const Color(0xFF00736D),
+          selectedItemColor: Colors.orange[600],
           unselectedItemColor: Colors.grey[400],
           selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
           items: const [
@@ -646,17 +656,21 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       slivers: [
         SliverToBoxAdapter(
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF00736D), Color(0xFF00A69A)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
+                colors: [
+                  Colors.orange[600]!,
+                  Colors.orange[400]!,
+                  Colors.orange[300]!,
+                ],
               ),
             ),
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -666,14 +680,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
+                          letterSpacing: 0.5,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 8),
                       const Text(
                         'Temukan barang bekas yang layak pakai',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -683,7 +699,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
+                              color: Colors.black.withOpacity(0.15),
                               blurRadius: 10,
                               offset: const Offset(0, 4),
                             ),
@@ -699,7 +715,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           decoration: InputDecoration(
                             hintText: 'Cari barang bekas...',
                             hintStyle: TextStyle(color: Colors.grey[400]),
-                            prefixIcon: const Icon(Icons.search, color: Color(0xFF00736D)),
+                            prefixIcon: Icon(Icons.search, color: Colors.orange[600]),
                             suffixIcon: _searchQuery.isNotEmpty
                                 ? IconButton(
                                     icon: const Icon(Icons.clear, color: Colors.grey),
