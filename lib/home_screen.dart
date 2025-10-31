@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   List<Map<String, dynamic>> items = [
     {
       'id': 1,
-      'image': 'assets/logo_rebox.png',
+      'image': 'assets/baju1.jpeg',
       'name': 'Baju Bekas Layak Pakai',
       'desc': 'Masih bagus dan bersih, cocok untuk donasi.',
       'contact': '0812-3456-7890',
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     },
     {
       'id': 2,
-      'image': 'assets/logo_rebox.png',
+      'image': 'assets/sepatu.jpg',
       'name': 'Sepatu Olahraga',
       'desc': 'Kondisi 90%, ukuran 40.',
       'contact': '0821-6543-2109',
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     },
     {
       'id': 3,
-      'image': 'assets/logo_rebox.png',
+      'image': 'assets/tas.jpg',
       'name': 'Tas Sekolah',
       'desc': 'Masih kuat dan bagus, jarang dipakai.',
       'contact': '0813-8888-7777',
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     },
     {
       'id': 4,
-      'image': 'assets/logo_rebox.png',
+      'image': 'assets/tas.jpg',
       'name': 'Jaket Musim Dingin',
       'desc': 'Hangat dan nyaman, ukuran M.',
       'contact': '0856-1234-5678',
